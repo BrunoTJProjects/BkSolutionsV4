@@ -104,11 +104,19 @@ public class UserHardwares {
 			hardware.sendCommand(comando.toString());
 			key = comando.getString(CHAVE_KEY);
 			String value = comando.getString(VALUE_KEY);
+			waitConfirm(codReq, cliente);
 			
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
+					long contador = System.currentTimeMillis();
 					try {
+						while (!wasConfimed(codReq)) {
+							if ((System.currentTimeMillis() - contador) > 10000) {
+								confirmReceived(codReq);
+								return;
+							}
+						}
 						cliente.getCliente().setChave(mac, key, value);
 						for (SocketBase sb : clientes) {
 							if (sb == cliente)
