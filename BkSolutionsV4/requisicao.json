@@ -1,0 +1,22 @@
+{
+	"requisicao": {
+		"deviceType": "hardware",
+		"tipoReq": "login|logout|command",
+		"login": "bruno.melo@tcm10.com.br",
+		"password": "8aB1yGj4",
+		"dados": {
+			"request": "setKey",
+			"codReq": "794568038", Apenas se tiver a necessidade de confirmação
+			"mac": "66:85:a1:d4:76:6c",
+			"serial": "12345678910",
+			"key": "rele1",
+			"value": "1",
+			"keys": {
+				"rele1": "1",
+				"rele2": "0",
+				"rele3": "1",
+				"rele4": "1"
+			}
+		}
+	}
+}
