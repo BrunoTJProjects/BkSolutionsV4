@@ -6,7 +6,7 @@
 		"password": "8aB1yGj4",
 		"dados": {
 			"request": "setKey",
-			"codReq": "794568038", Apenas se tiver a necessidade de confirmação
+			"codReq": "794568038",
 			"mac": "66:85:a1:d4:76:6c",
 			"serial": "12345678910",
 			"key": "rele1",
