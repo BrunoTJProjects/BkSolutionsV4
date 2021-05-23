@@ -216,10 +216,8 @@ public class UserHardwares {
 		if (!hardwares.containsKey(hardware.getHardware().getMac())) {
 			hardwares.put(hardware.getHardware().getMac(), hardware);
 		} else {
-			SocketBase hardAntigo = hardwares.get(hardware.getHardware().getMac());
-			hardAntigo.closeResouces();
-			hardAntigo = null;		
-			hardAntigo = hardware;
+			hardware.closeResouces();
+			hardware.setHardware(null);
 		}
 	}
 
