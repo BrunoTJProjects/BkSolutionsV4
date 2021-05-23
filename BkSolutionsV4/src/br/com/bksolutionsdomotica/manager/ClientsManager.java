@@ -55,7 +55,7 @@ public class ClientsManager {
 		}
 	}
 
-	public void addHardware(SocketBase hardware) throws ClassNotFoundException, SQLException {
+	public void addHardware(SocketBase hardware) throws ClassNotFoundException, SQLException, IOException {
 		if (hardware == null)
 			return;
 		int id = MyServerBk.getCodCliente(hardware.getHardware());

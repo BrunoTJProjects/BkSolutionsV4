@@ -212,11 +212,14 @@ public class UserHardwares {
 		return clientes.isEmpty();
 	}
 
-	public void addHardware(SocketBase hardware) throws ClassNotFoundException, SQLException {
+	public void addHardware(SocketBase hardware) throws ClassNotFoundException, SQLException, IOException {
 		if (!hardwares.containsKey(hardware.getHardware().getMac())) {
 			hardwares.put(hardware.getHardware().getMac(), hardware);
 		} else {
-			hardware.setHardware(null);
+			SocketBase hardAntigo = hardwares.get(hardware.getHardware().getMac());
+			hardAntigo.closeResouces();
+			hardAntigo = null;		
+			hardAntigo = hardware;
 		}
 	}
 
