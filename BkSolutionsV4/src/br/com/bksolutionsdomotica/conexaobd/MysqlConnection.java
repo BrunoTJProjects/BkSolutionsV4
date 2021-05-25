@@ -16,7 +16,7 @@ public class MysqlConnection {
 
 		String server = "localhost";
 		String banco = "bk_solutions";
-		String url = "jdbc:mysql://" + server + "/" + banco;// + "?autoReconnect=true&useSSL=false";
+		String url = "jdbc:mysql://" + server + "/" + banco + "?autoReconnect=true&useSSL=false";
 
 		String usuario = "root";
 		String senha = "8aB1yGj4";
